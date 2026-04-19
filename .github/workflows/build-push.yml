@@ -1,7 +1,7 @@
 name: build-push or CI
 
 on:
-  workflow-dispatch:
+  workflow_dispatch:
 
 jobs:
 
@@ -20,10 +20,10 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       name: Build and push
-      uses: docker/build-push-action@v5GITHUB_SHA
+      uses: docker/build-push-action@v5
       with:
           push: true
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/${{ GITHUB_SHA }}
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/${{ github_sha }}
 
 
 

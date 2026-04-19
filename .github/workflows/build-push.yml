@@ -1,0 +1,17 @@
+name: build-push
+
+on:
+  workflow-dispatch:
+
+jobs:
+
+  build-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      
+      #checkout code
+      uses: actions/checkout@v4
+
+
+      

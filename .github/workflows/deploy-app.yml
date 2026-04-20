@@ -1,0 +1,21 @@
+name: deploy-app
+
+on:
+  workflow-dispatch:
+
+jobs:
+
+  deploy-app:
+
+    env: 
+      DOCKERHUB_USER: ${{ vars.DOCKERHUB_USERNAME }}
+
+    runs-on: self-hosted
+
+    steps:
+
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Server via SSH
+        run: docker compose up -d --build   

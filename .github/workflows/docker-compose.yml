@@ -1,0 +1,6 @@
+services:
+
+  web:
+    image: ${DOCKERHUB_USERNAME}/github-actions:latest
+    ports:
+      - "5000:5000"

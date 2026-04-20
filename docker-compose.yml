@@ -1,6 +1,6 @@
 services:
 
   web:
-    image: ${DOCKERHUB_USERNAME}/github-actions:latest
+    image: ${DOCKERHUB_USERNAME}/github-actions:${DOCKER_TAG}
     ports:
       - "5000:5000"

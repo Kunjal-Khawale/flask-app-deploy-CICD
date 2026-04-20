@@ -1,7 +1,9 @@
 name: deploy-app
 
 on:
-  workflow_dispatch:
+  workflow_run:
+    workflows: ["build-push or CI"]   # must match EXACT name
+    types: [completed]
 
 jobs:
 

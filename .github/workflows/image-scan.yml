@@ -25,4 +25,4 @@ jobs:
                 severity: 'CRITICAL,HIGH'
                 exit-code: '1'
                 trivyignore: ${{ github.workspace }}/.trivyignore
-                ignore-policy: '.trivyignore'
+                input: '.trivyignore'
